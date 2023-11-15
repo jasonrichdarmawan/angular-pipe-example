@@ -1,3 +1,17 @@
+`import { multiply } from '../shared/pipes/multiply/multiply';` is ok.
+
+    when `app2` and `app4` import it, webpack will compile it to `common.js`
+
+    it is always better to use pipe instead of function in HTML.
+
+    pipe will cache the result, so it will not call the function again whenever the HTML re-render, if the pipe parameter do not change.
+
+    so, if you want to make a function available in HTML:
+    1. do not create a new variable like in `app2`.
+    2. use pipe like in `app3`.
+
+    if you only use the function in the component, then you do not need pipe.
+
 # AngularServiceExample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
