@@ -1,6 +1,16 @@
+# 1 Pipe in component
+
+if you use pipe in component, the memoization feature will be disabled.
+
+i.e. if you add a pipe to the `providers` key like in `app1`.
+
+# 2 import function or pipe
+
 `import { multiply } from '../shared/pipes/multiply/multiply';` is ok.
 
     when `app2` and `app4` import it, webpack will compile it to `common.js`
+    
+# 3 use function or pipe
 
     it is always better to use pipe instead of function in HTML.
 

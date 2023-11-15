@@ -13,9 +13,9 @@ export class App1Component implements OnInit {
   name: string;
 
   constructor(
-    public counterService: CounterService, // because of SharedModule.providers
-    public currencyPipe: CurrencyPipe, // because of SharedModule.providers
-    public greeter: Greeter // because of SharedModule.providers
+    public counterService: CounterService,
+    public currencyPipe: CurrencyPipe,
+    public greeter: Greeter
   ) {
     this.currency = currencyPipe.transform("function", "component", 1);
     this.currency = currencyPipe.transform("function", "component", 2);
